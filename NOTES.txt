@@ -103,3 +103,8 @@ AI:
 
     Overrided Fire Function:
 
+GOALS:
+    Boilerplate code /
+    Rendering of Boards /
+    Manual Placing the Boats
+    First Combat Iteration

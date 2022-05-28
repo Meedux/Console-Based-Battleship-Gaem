@@ -1,5 +1,5 @@
-#ifndef PLAYER
-#define PLAYER
+#ifndef _PLAYER_HPP_
+#define _PLAYER_HPP_
 
 #include <iostream>
 #include <string>
@@ -39,4 +39,4 @@ class Player
 };
 
 
-#endif PLAYER
+#endif 

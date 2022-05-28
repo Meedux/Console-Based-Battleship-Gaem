@@ -1,11 +1,11 @@
 #include <iostream>
+#include "app/includes/game.hpp"
 
 using namespace std;
 
 int main(){
-    cout << "Hello World!" << endl;
-    
+    Game game;
 
-    system("pause");
+    game.gameProcess();
     return 0;
 }
