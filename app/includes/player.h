@@ -8,17 +8,21 @@
 
 using namespace std;
 
+// The Boat struct for the Player class
+struct Boat{
+    string name;
+    int size;
+    char symbol;
+};
 
 class Player: public Game{
-    struct Boat{
-        string name;
-        int size;
-        char symbol;
-    };
+
+        // to Store the Ships in an array
         Boat boats[6];
-        int boatCount{6};
 
     public:
+
+        // Player Initialization and it's properties
         Player(){
             for(size_t i = 0; i < 6; i++){
                 Boat temp;
@@ -46,7 +50,7 @@ class Player: public Game{
             boats[5].name = "Aircraft Carrier";
         }
 
-        bool isDead(int boatsSunken);
+        // Getter Functions
         char getBoatSymbol(int index);
         int getBoatSize(int index);
         void getBoatNames();
