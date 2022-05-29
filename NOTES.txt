@@ -106,5 +106,6 @@ AI:
 GOALS:
     Boilerplate code /
     Rendering of Boards /
-    Manual Placing the Boats
+    Manual Placing the ships /
+    AI placing of ships
     First Combat Iteration
