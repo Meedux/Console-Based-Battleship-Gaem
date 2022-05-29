@@ -4,18 +4,17 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "game.h"
 
 using namespace std;
 
 
-
-struct Boat{
-    string name;
-    int size;
-    char symbol;
-};
-class Bot;
-class Player: public Game {
+class Player: public Game{
+    struct Boat{
+        string name;
+        int size;
+        char symbol;
+    };
         Boat boats[6];
         int boatCount{6};
 
@@ -47,7 +46,7 @@ class Player: public Game {
             boats[5].name = "Aircraft Carrier";
         }
 
-        bool checkPlayer();
+        bool isDead(int boatsSunken);
         char getBoatSymbol(int index);
         int getBoatSize(int index);
         void getBoatNames();

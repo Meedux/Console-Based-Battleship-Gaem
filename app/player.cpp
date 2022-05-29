@@ -1,11 +1,10 @@
 #include "includes/player.h"
-#include "includes/game.h"
 
-bool Player::checkPlayer(){
-    if(this->boatCount == 0){
-        return false;
+bool Player::isDead(int boatsSunken){
+    if((this->boatCount - boatsSunken) == 0){
+        return true;
     }
-    return true;
+    return false;
 }
 
 void Player::getBoatNames(){

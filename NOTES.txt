@@ -1,111 +1,18 @@
-Initialize default variables
-  Create game board
-  
-  Loop till all ships are placed
-    Draw board
-    A player places ships
-     Toggle to next player
-
-  Game Loop Start
-    Player X inputs valid attack grid
-     Check to see if attack is a hit
-     Remove/add damage to hit ships
-     Redraw game board
-     Check to see if game is over
-         If game over - exit loop/end program
-     Toggle next player's turn
-  Game Loop Return
-
-
-
-Game:
-    Game Starts by Player Choosing the placement of the boats:
-        Player will have a choice to Manually Place the Boats or Randomly placed
-
-    Initial GameLoop Starts
-
-    Board will be rendered in the console:
-        The Size of the board is randomly generated(between 15 - 50)
-
-    Player will choose the coordinate to shoot:
-        Board will mark the specified coordinates and will check it enemy hit or missed:
-            HIT = 0
-            MISSED = X
-        
-    Check the Game Board:
-        if:
-            Hit:
-                The Game will mark the part of the boat X and if fully destroyed(all of the parts had been hit) the game will turn their isDead Bool to true and it will be unusable
-                if a ship is destroyed the game will null the player's boat array
-                
-                if:
-                    Destroyed:
-                        The Game will decrement the current player's current boat count
-            Missed:
-                The game will just Mark it as X and its unfireable
-
-        else if:
-            if the specified coordinates has already been shot then the game will issue a warning and will end the current player's turn
-        
-        else if:
-            All Boats are Destroyed:    
-                if All Boats are destroyed from the player then the game will end and the winner will be declared
-
-        the Update function will be called after the game checked the boards
-
-
-    Updating the Board:
-        the board wil reprint but this time it will have the updated board with hits and misses
-
-    End Player Turn 
-
-    Same Semantics for the Opponent From the Player
-
-    Check Game Board again
-
-    Repeat until one side won
-
-    if:
-        Won:
-            The Game will Abruptly end and the Winner will be anounced
-
-
-Player:
-
-    Has Properties:
-        Constant Boat Array Property
-        Boat Count
-    
-    Boat:
-        has Properties:
-            Symbol(to be used in the board)
-            Size(or length in one dimension only)
-            isDead Bool
-    
-    Fire Function:
-        Will Input the coordinates
-        after inputting the coordinates a function named checkBoard will appear and it will check the input and update the board
-
-    checkPlayer Function:
-        will return true or false
-
-        True:
-            if the Boat Count is zero
-        False:
-            if the Boat Count is more than zero
-
-
-
-
-
-AI:
-    Will Inherit from the player however the Fire function will be overrided and it will input random numbers as athe coordinate
-
-    Overrided Fire Function:
-
 GOALS:
     Boilerplate code /
     Rendering of Boards /
     Manual Placing the ships /
-    AI placing of ships
-    First Combat Iteration
+    AI placing of ships /
+    First Combat Iteration /
+    Implementing Winning
+    User Guide
+    Documentation
+
+    Code Commenting
+    Code Revisions
+    Code Cleanup
+
+    TODO TOM:
+        Finish The Win Logic
+        Finish the User Guide
+        Create a short but detailed Explanation about the program
